@@ -34,22 +34,27 @@ void Prostopadloscian::rysuj()
     {
         {
             {
-            drawNS::Point3D((*this).wierzcholki[0][0],(*this).wierzcholki[0][1],(*this).wierzcholki[0][2]),
-            drawNS::Point3D((*this).wierzcholki[1][0],(*this).wierzcholki[1][1],(*this).wierzcholki[1][2]),
-            drawNS::Point3D((*this).wierzcholki[2][0],(*this).wierzcholki[2][1],(*this).wierzcholki[2][2])
+                drawNS::Point3D((*this).wierzcholki[0][0],(*this).wierzcholki[0][1],(*this).wierzcholki[0][2]),
+                drawNS::Point3D((*this).wierzcholki[1][0],(*this).wierzcholki[1][1],(*this).wierzcholki[1][2]),
+                drawNS::Point3D((*this).wierzcholki[2][0],(*this).wierzcholki[2][1],(*this).wierzcholki[2][2])
             },
             {
-            drawNS::Point3D((*this).wierzcholki[3][0],(*this).wierzcholki[3][1],(*this).wierzcholki[3][2]),
-            drawNS::Point3D((*this).wierzcholki[4][0],(*this).wierzcholki[4][1],(*this).wierzcholki[4][2]),
-            drawNS::Point3D((*this).wierzcholki[5][0],(*this).wierzcholki[5][1],(*this).wierzcholki[5][2])
+                drawNS::Point3D((*this).wierzcholki[3][0],(*this).wierzcholki[3][1],(*this).wierzcholki[3][2]),
+                drawNS::Point3D((*this).wierzcholki[4][0],(*this).wierzcholki[4][1],(*this).wierzcholki[4][2]),
+                drawNS::Point3D((*this).wierzcholki[5][0],(*this).wierzcholki[5][1],(*this).wierzcholki[5][2])
             },
             {
-            drawNS::Point3D((*this).wierzcholki[6][0],(*this).wierzcholki[6][1],(*this).wierzcholki[6][2]),
-            drawNS::Point3D((*this).wierzcholki[7][0],(*this).wierzcholki[7][1],(*this).wierzcholki[7][2]),
-            drawNS::Point3D((*this).wierzcholki[8][0],(*this).wierzcholki[8][1],(*this).wierzcholki[8][2])
+                drawNS::Point3D((*this).wierzcholki[6][0],(*this).wierzcholki[6][1],(*this).wierzcholki[6][2]),
+                drawNS::Point3D((*this).wierzcholki[7][0],(*this).wierzcholki[7][1],(*this).wierzcholki[7][2]),
+                drawNS::Point3D((*this).wierzcholki[8][0],(*this).wierzcholki[8][1],(*this).wierzcholki[8][2])
             }
         }
     },"black")
+}
+
+void Prostopadloscian::wymaz()
+{
+    (*this).gplt->erase_shape((*this).id);
 }
 
 void Prostopadloscian::jazda(double odl)
@@ -65,7 +70,7 @@ void Prostopadloscian::obrot(double kat)
     MacierzObr nowa_orientacja('Z',kat); 
     (*this).gplt.erase_shape((*this).id);
     (*this).orientacja = (*this).orientacja * nowa_orientacja;
-    (*this).Rysuj();
+    (*this).rysuj();
 }
 
 void Prostopadloscian::gora_dol(double odl)

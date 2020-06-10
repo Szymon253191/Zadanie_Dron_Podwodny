@@ -14,6 +14,7 @@ class Prostopadloscian:public Obiekt3D
     public:
     Prostopadloscian();
     Prostopadloscian(double A, double B, double H, drawNS::Draw3DAPI *api);
+    void wymaz() override;
     void rysuj() override;
     void jazda(double odl);
     void obrot(double kat);

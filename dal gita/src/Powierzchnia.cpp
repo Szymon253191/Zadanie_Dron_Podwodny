@@ -25,19 +25,19 @@ void Powierzchnia::Rysuj()
   {
     {
         {
-      drawNS::Point3D(0,(*this).wymiar[2],(*this).wymiar[4]), 
-      drawNS::Point3D(0,(*this).wymiar[3],(*this).wymiar[4]), 
-      drawNS::Point3D(0,0,(*this).wymiar[4])
+          drawNS::Point3D(0,(*this).wymiar[2],(*this).wymiar[4]), 
+          drawNS::Point3D(0,(*this).wymiar[3],(*this).wymiar[4]), 
+          drawNS::Point3D(0,0,(*this).wymiar[4])
         },
         {
-      drawNS::Point3D((*this).wymiar[0],(*this).wymiar[2],(*this).wymiar[4]), 
-      drawNS::Point3D((*this).wymiar[0],0,(*this).wymiar[4]), 
-      drawNS::Point3D((*this).wymiar[0],(*this).wymiar[3],(*this).wymiar[4]),
+          drawNS::Point3D((*this).wymiar[0],(*this).wymiar[2],(*this).wymiar[4]), 
+          drawNS::Point3D((*this).wymiar[0],0,(*this).wymiar[4]), 
+          drawNS::Point3D((*this).wymiar[0],(*this).wymiar[3],(*this).wymiar[4]),
         },
         {
-      drawNS::Point3D((*this).wymiar[1],(*this).wymiar[2],(*this).wymiar[4]), 
-      drawNS::Point3D((*this).wymiar[1],0,(*this).wymiar[4]), 
-      drawNS::Point3D((*this).wymiar[1],(*this).wymiar[3],(*this).wymiar[4])  
+          drawNS::Point3D((*this).wymiar[1],(*this).wymiar[2],(*this).wymiar[4]), 
+          drawNS::Point3D((*this).wymiar[1],0,(*this).wymiar[4]), 
+          drawNS::Point3D((*this).wymiar[1],(*this).wymiar[3],(*this).wymiar[4])  
         }
     }
   },"blue");

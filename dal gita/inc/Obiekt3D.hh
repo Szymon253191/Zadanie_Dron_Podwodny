@@ -12,6 +12,7 @@ class Obiekt3D
 
     public:
     virtual void rysuj() = 0;
+    virtual void wymaz() = 0;
 };
 
 #endif
