@@ -4,8 +4,8 @@ TRGDIR=./
 
 __start__: ${TRGDIR}/dron
 		${TRGDIR}/dron
-${TRGDIR}/dron: ${OBJ} ${OBJ}/main.o ${OBJ}/Dr3D_gnuplot_api.o ${OBJ}/Prostopadloscian.o ${OBJ}/WektorC.o ${OBJ}/MacierzC.o ${OBJ}/MacierzObr.o ${OBJ}/Dron.o ${OBJ}/Graniastoslup6.o ${OBJ}/Sruba.o ${OBJ}/Powierzchnia.o ${OBJ}/Dno.o
-			g++ -o ${TRGDIR}/dron ${OBJ}/main.o ${OBJ}/Dr3D_gnuplot_api.o ${OBJ}/Prostopadloscian.o ${OBJ}/WektorC.o ${OBJ}/MacierzC.o ${OBJ}/MacierzObr.o ${OBJ}/Dron.o ${OBJ}/Graniastoslup6.o ${OBJ}/Sruba.o ${OBJ}/Powierzchnia.o ${OBJ}/Dno.o -lpthread
+${TRGDIR}/dron: ${OBJ} ${OBJ}/main.o ${OBJ}/Dr3D_gnuplot_api.o ${OBJ}/Prostopadloscian.o ${OBJ}/WektorC.o ${OBJ}/MacierzC.o ${OBJ}/MacierzObr.o ${OBJ}/Dron.o ${OBJ}/Powierzchnia.o ${OBJ}/Dno.o
+			g++ -o ${TRGDIR}/dron ${OBJ}/main.o ${OBJ}/Dr3D_gnuplot_api.o ${OBJ}/Prostopadloscian.o ${OBJ}/WektorC.o ${OBJ}/MacierzC.o ${OBJ}/MacierzObr.o ${OBJ}/Dron.o ${OBJ}/Powierzchnia.o ${OBJ}/Dno.o -lpthread
 ${OBJ}:
 		mkdir ${OBJ}
 ${OBJ}/main.o: src/main.cpp inc/Obiekt3D.hh inc/Wektor.hh inc/Macierz.hh inc/Dr3D_gnuplot_api.hh inc/Draw3D_api_interface.hh inc/Prostopadloscian.hh inc/Interfejs.hh inc/MacierzObr.hh inc/Graniastoslup6.hh inc/Sruba.hh inc/Plaszczyzna.hh inc/Dno.hh inc/Powierzchnia.hh
@@ -22,10 +22,6 @@ ${OBJ}/Dron.o: inc/Dron.hh src/Dron.cpp inc/Obiekt3D.hh inc/Wektor.hh inc/Macier
 		g++ ${CPPFLAGS} -o ${OBJ}/Dron.o src/Dron.cpp
 ${OBJ}/MacierzObr.o: inc/MacierzObr.hh src/MacierzObr.cpp inc/Macierz.hh inc/Wektor.hh
 		g++ ${CPPFLAGS} -o ${OBJ}/MacierzObr.o src/MacierzObr.cpp
-${OBJ}/Graniastoslup6.o: src/Graniastoslup6.cpp inc/Graniastoslup6.hh inc/Wektor.hh inc/Macierz.hh inc/Dr3D_gnuplot_api.hh inc/Draw3D_api_interface.hh inc/Obiekt3D.hh inc/MacierzObr.hh
-		g++ ${CPPFLAGS} -o ${OBJ}/Graniastoslup6.o src/Graniastoslup6.cpp
-${OBJ}/Sruba.o: src/Sruba.cpp inc/Sruba.hh inc/Graniastoslup6.hh inc/Wektor.hh inc/Macierz.hh inc/Dr3D_gnuplot_api.hh inc/Draw3D_api_interface.hh inc/Obiekt3D.hh inc/MacierzObr.hh
-		g++ ${CPPFLAGS} -o ${OBJ}/Sruba.o src/Sruba.cpp
 ${OBJ}/Dno.o: src/Dno.cpp inc/Dno.hh inc/Plaszczyzna.hh inc/Wektor.hh inc/Macierz.hh inc/Dr3D_gnuplot_api.hh inc/Draw3D_api_interface.hh inc/Obiekt3D.hh inc/MacierzObr.hh
 		g++ ${CPPFLAGS} -o ${OBJ}/Dno.o src/Dno.cpp
 ${OBJ}/Powierzchnia.o: src/Powierzchnia.cpp inc/Powierzchnia.hh inc/Plaszczyzna.hh inc/Wektor.hh inc/Macierz.hh inc/Dr3D_gnuplot_api.hh inc/Draw3D_api_interface.hh inc/Obiekt3D.hh inc/MacierzObr.hh
