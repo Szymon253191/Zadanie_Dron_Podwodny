@@ -1,26 +1,25 @@
 #include "MacierzObr.hh"
-MacierzObr()
+MacierzObr::MacierzObr()
 {
     for(int i=0;i<3;i++)
     {
         tab[i][i] = 1;
     }
 }
-
 MacierzObr::MacierzObr(const Macierz<double,3> & Mac)
 {
     double epsilon=0.000000001;
-    if(std::abs(tab[0]*tab[1])>epsilon || std::abs(tab[1]*tab[2])>epsilon || std::abs(tab[0]*tab[2])>epsilon || std::abs((*this).wyznacznik()-1>epsilon))
+    if(abs(tab[0]*tab[1])>epsilon || abs(tab[1]*tab[2])>epsilon || abs(tab[0]*tab[2])>epsilon || abs((*this).wyznacznik()-1>epsilon))
     {
-        cerr<<"Macierz ta nie jest ortogonalna\n";
+        std::cerr<<"Macierz ta nie jest ortogonalna\n";
         exit(1);
     }
 }
 
-MacierzObr::MacierzObr(Os os, double kat)
+MacierzObr::MacierzObr(Os TYP, double kat)
 {
     kat = kat * 3.1416 / 180;
-    switch(os)
+    switch(TYP)
     {
         case X:
         {

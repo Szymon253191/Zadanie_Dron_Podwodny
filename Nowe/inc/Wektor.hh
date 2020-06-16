@@ -15,6 +15,8 @@ class Wektor
     Wektor operator - (const Wektor <TYP,ROZMIAR> & W2) const;
     Wektor operator * (const Wektor <TYP,ROZMIAR> & W2) const;
     Wektor operator * (TYP L2) const;
+    Wektor operator / (TYP L2) const;
+    Wektor operator += (const Wektor <TYP, ROZMIAR> & W2) const;
     double dlugosc() const
     {
         return sqrt(*this * *this);

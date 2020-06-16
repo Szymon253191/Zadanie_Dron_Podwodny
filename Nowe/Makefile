@@ -8,7 +8,7 @@ dron: obj/main.o obj/Wektor.o obj/Macierz.o obj/Dr3D_gnuplot_api.o\
 	  obj/Dr3D_gnuplot_api.o\
 	  -lpthread
 
-obj/main.o: src/main.cpp inc/Macierz.hh\
+obj/main.o: src/main.cpp inc/Macierz.hh inc/MacierzObr.hh inc/Obiekt.hh inc/Prostopadloscian.hh\
 	 inc/Dr3D_gnuplot_api.hh 
 	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
 
@@ -20,6 +20,12 @@ obj/Macierz.o: src/MacierzC.cpp inc/Macierz.hh
 
 obj/Dr3D_gnuplot_api.o: src/Dr3D_gnuplot_api.cpp inc/Dr3D_gnuplot_api.hh
 	g++ ${CPPFLAGS} -o obj/Dr3D_gnuplot_api.o src/Dr3D_gnuplot_api.cpp
+
+obj/Obiekt.o: inc/Obiekt.hh
+	g++ ${CPPFLAGS} -o obj/Obiekt.o src/Obiekt.cpp
+
+obj/Prostopadloscian.o: inc/Prostopadloscian.hh inc/Bryla.hh inc/Obiekt.hh
+	g++ ${CPPFLAGS} -o obj/Prostopadloscian.o src/Prostopadloscian.cpp
 
 inc/Dr3D_gnuplot_api.hh: inc/Draw3D_api_interface.hh
 	touch inc/Dr3D_gnuplot_api.hh

@@ -1,4 +1,4 @@
-#include " Wektor.hh"
+#include "Wektor.hh"
 
 template <class TYP, int ROZMIAR>
 Wektor <TYP,ROZMIAR>::Wektor()
@@ -53,7 +53,7 @@ Wektor <TYP,ROZMIAR> Wektor <TYP,ROZMIAR>::operator- (const Wektor <TYP,ROZMIAR>
 }
 
 template <class TYP, int ROZMIAR>                                                
-TYP Wektor <TYP,ROZMIAR>::operator * (const Wektor <TYP,ROZMIAR> & W2) const 
+Wektor <TYP,ROZMIAR> Wektor <TYP,ROZMIAR>::operator * (const Wektor <TYP,ROZMIAR> & W2) const 
 {
     TYP Wynik = 0;
     for (int i=0;i<ROZMIAR;++i)
@@ -75,7 +75,7 @@ Wektor <TYP,ROZMIAR> Wektor <TYP,ROZMIAR>::operator* (TYP L2) const
 } 
 
 template <class TYP, int ROZMIAR>
-Wektor <TYP,ROZMIAR> Wektor <TYP,ROZMIAR>::operator/ (TYP L2) const
+Wektor <TYP,ROZMIAR> Wektor <TYP,ROZMIAR>::operator / (TYP L2) const
 {
     Wektor <TYP,ROZMIAR> Wynik;
     if(L2==0)
@@ -123,6 +123,12 @@ template <class TYP, int ROZMIAR>
 bool Wektor <TYP,ROZMIAR>::operator!= (const Wektor <TYP,ROZMIAR> & W2) const
 {
     return !(*this==W2);
+}
+
+template <class TYP, int ROZMIAR>
+Wektor<TYP, ROZMIAR> Wektor<TYP, ROZMIAR>::operator += (const Wektor <TYP, ROZMIAR> & W2) const
+{
+    
 }
 
 template <class TYP, int ROZMIAR>

@@ -10,7 +10,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #ifndef DR3D_API_INT_HH
 #define DR3D_API_INT_HH
-#include " Wektor.hh"
+#include "Wektor.hh"
 #include <vector>
 #include <string>
 #include <iostream>

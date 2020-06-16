@@ -12,7 +12,7 @@ Macierz<TYP,ROZMIAR>::Macierz()
     }             
 }
 
-template <class TYP,int ROZMIAR>
+template <class TYP, int ROZMIAR>
 const Wektor <TYP,ROZMIAR> & Macierz <TYP,ROZMIAR>::operator [] (int index) const
 {
     if(index<0||index>ROZMIAR)
@@ -35,7 +35,7 @@ Wektor <TYP,ROZMIAR> & Macierz <TYP,ROZMIAR>::operator [] (int index)
 }
 
 template <class TYP, int ROZMIAR>
-Wektor <TYP, ROZMIAR> Macierz <TYP, ROZMIAR>::operator * (const Wektor <TYP, ROZMIAR> & W2) const
+Wektor <TYP, ROZMIAR>  Macierz <TYP, ROZMIAR>::operator * (const Wektor <TYP, ROZMIAR> & W2) const
 {
    Wektor <TYP, ROZMIAR> wynik;
    for(int i=0;i<ROZMIAR;i++)
@@ -45,8 +45,9 @@ Wektor <TYP, ROZMIAR> Macierz <TYP, ROZMIAR>::operator * (const Wektor <TYP, ROZ
    return wynik;
 }
 
-template <class TYP, int ROZMIAR>
-TYP Macierz <TYP,ROZMIAR>::wyznacznik() const
+
+template <class TYP,int ROZMIAR>
+TYP Macierz<TYP,ROZMIAR>::wyznacznik() const
 {
     Macierz <TYP,ROZMIAR> wynik = *this;
     int pom = 0;
@@ -121,7 +122,7 @@ Macierz <TYP,ROZMIAR> Macierz <TYP,ROZMIAR>::operator * (const Macierz <TYP,ROZM
 }
 
 template <class TYP, int ROZMIAR>
-Wektor <TYP,ROZMIAR> Macierz <TYP,ROZMIAR>::operator * (TYP L2) const
+Macierz <TYP,ROZMIAR> Macierz <TYP,ROZMIAR>::operator * (TYP L2) const
 {
     Wektor <TYP,ROZMIAR> wynik;
     for(int i=0;i<ROZMIAR;i++)
